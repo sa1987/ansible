@@ -1,0 +1,7 @@
+[lb]
+Lb01
+Lb02
+
+[control]
+localhost ansible_connection=local
+
