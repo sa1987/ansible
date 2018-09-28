@@ -1,0 +1,15 @@
+###
+
+
+There are two options that you can add to the [defaults] section of the ansible.cfg file that will control whether or not .retry files are created and where they are created.
+
+[defaults]
+...
+retry_files_enabled = True  # Create them - the default
+retry_files_enabled = False # Do not create them
+
+retry_files_save_path = "~/" # The directory they will go into
+                             # (home directory by default)
+
+When Ansible has problems running plays against a host, it will output the name of the host into a file in the user's home directory ending in '.retry'. These are often not used and just cause clutter, is there a way to turn them off or put them in a different directory
+###

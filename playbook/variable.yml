@@ -1,0 +1,11 @@
+---
+- hosts: control
+  become: true
+  vars:
+    - control_server: localhost
+      web_root: /root
+  vars_files:
+    - vars.yml
+  tasks: 
+  - name: install web server
+    yum:  pkg=wget state=installed update_cache=true
